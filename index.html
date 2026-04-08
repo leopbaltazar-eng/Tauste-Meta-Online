@@ -191,6 +191,90 @@ select:focus{border-color:var(--brand2)}
   .chart-box{padding:12px}
 }
 
+
+/* ── MOBILE APRIMORADO (iPhone e telas até 480px) ── */
+@media(max-width:480px){
+  /* Topbar compacta */
+  .topbar-title{font-size:13px}
+  #topbar-meta{display:none}
+  #topbar-data{font-size:10px}
+
+  /* KPI grids — 2 colunas sempre */
+  .kpi-grid{grid-template-columns:1fr 1fr!important;gap:8px}
+  .kpi{padding:10px 10px 10px 14px}
+  .kpi-val{font-size:16px}
+  .kpi-lbl{font-size:9px}
+  .kpi-sub{font-size:9px}
+  #filial-kpis{grid-template-columns:1fr 1fr!important}
+  #filial-kpis .kpi-val{font-size:14px}
+  #filial-proj-kpis{grid-template-columns:1fr 1fr!important}
+
+  /* Gráficos — altura menor */
+  .chart-grid{grid-template-columns:1fr;gap:10px}
+  canvas{max-height:200px}
+
+  /* Cards de filial/setor menores */
+  .sel-cards{grid-template-columns:1fr 1fr;gap:8px}
+  .sel-card{padding:10px 12px}
+  .sel-card-name{font-size:11px}
+  .sel-card-pct{font-size:15px}
+  .setor-cards-wrap{flex-direction:column}
+  .sc-active-slot{width:100%}
+  .sc-others-grid{display:grid!important;grid-template-columns:1fr 1fr;gap:6px}
+  .setor-card{padding:7px 10px}
+  .sc-name{font-size:10px}
+  .sc-pct-small{font-size:10px}
+
+  /* Tabelas — scroll horizontal */
+  .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{min-width:480px}
+  th,td{padding:7px 8px;font-size:11px}
+
+  /* filial-grid empilha */
+  .filial-grid{grid-template-columns:1fr!important}
+
+  /* Projeção — bloco compacto */
+  #filial-proj-bloco .card{padding:12px}
+
+  /* Hist grid */
+  #tab-historico .chart-grid,
+  div[style*="grid-template-columns:1fr 1fr"]{
+    display:block!important
+  }
+  #tab-historico canvas{margin-bottom:16px}
+
+  /* Popup setor — largura total */
+  .setor-popup{
+    width:100vw!important;max-height:100vh!important;
+    border-radius:16px 16px 0 0!important;
+    top:auto!important;bottom:0!important;
+    transform:translateX(-50%)!important;
+  }
+  .sp-header{border-radius:16px 16px 0 0!important}
+  .sp-btn-setores,.sp-btn-pdf{font-size:10px;padding:4px 8px}
+
+  /* Seletor popup — largura total */
+  .seletor-popup{
+    width:100vw!important;max-height:90vh!important;
+    border-radius:16px 16px 0 0!important;
+    top:auto!important;bottom:0!important;
+    transform:translateX(-50%)!important;
+  }
+  .sel-pop-grid{grid-template-columns:1fr 1fr!important}
+
+  /* Popup filial — largura total */
+  .filial-popup{
+    width:95vw!important;
+  }
+  .fp-kpis{grid-template-columns:repeat(3,1fr)!important}
+
+  /* Barra de progresso mês */
+  .content .card:first-child{padding:12px}
+
+  /* Ranking filiais */
+  #ranking-filiais > div{flex-wrap:wrap}
+}
+
 /* Cards de filial — grid normal sempre expandido */
 .sel-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:20px}
 .sel-card{background:white;border:2px solid var(--border);border-radius:14px;padding:16px;
